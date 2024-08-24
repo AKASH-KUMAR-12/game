@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+background-color: #8CC461;
+width: 100%;
+height: 95.5vh; 
+padding-top:2rem ; 
+overflow-y: hidden;
+
+}
+
+.box{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 1rem;
+    height: auto;
+    margin-inline: auto;
+    
+}
+.right{
+    display: flex;
+    justify-content: space-between;
+}
+.box .right .computerScore{
+    margin-right: 1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    height: 5rem;
+    background: #fff;
+    font-weight: bolder;
+
+}
+.right .userScore{
+    border-radius: 10px;
+    height: 5rem;
+    padding: 0.5rem;
+    background: #fff;
+}
+.right .computerScore p{
+    color: #656565;
+    background-color: #ffffff;
+     width: 6rem;
+     text-align: center;
+}
+.right .computerScore h1{
+    text-align: center;
+}
+.right .userScore p{
+    background-color: #ffffff;
+    color: #656565;
+    width: 6rem;
+    text-align: center;
+    font-weight: bolder;
+}
+.right .userScore h1{
+    text-align: center;
+    
+}
+
+.box .left p{
+    color: #ffffff;
+    font-size: 30px;  
+}
+
+.rules{
+    position: relative;
+    left:77%;
+    bottom: -7rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #004429;
+    border: 5px solid  #ffffff;
+    width:15rem;
+    border-radius: 10px;
+    padding-left: 1.3rem;
+}
+/* .rules .image{
+    background-color: red;
+    width: 5rem;
+} */
+.rules img{
+    position: absolute;
+    background-color: red;
+    width: 2rem;
+    height: 2rem;
+    padding: 5px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    right: -2rem;
+    top: -2rem;
+}
+.rules ul li{
+    color: #ffffff;
+    padding-block: 12px;
+    padding-inline: 5px;
+     font-size: 0.9rem;
+    
+}
+.rules ul li::before{
+    color:yellow;
+    content: "■";
+    position: absolute;
+    left: 6px;
+    padding-right: 1rem;
+}
+.triangle {
+    position: relative;
+    width: 30%;
+    left: 35%;
+    top:20%;
+    /* width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid white; /* White inside */
+    /* position: relative; */
+    /* width: 107.91px; */ 
+/* height: 0px;
+top: 447px;
+left: 547px;
+gap: 0px;
+border: 15px 0px 0px 0px;
+opacity: 0px;
+rotate: -60.58 deg; */
+
+}
+.triangle .first{
+    width: 80%;
+    background-color: black;
+    height: 1.3rem;
+    
+    /* rotate: 60deg; */
+}
+.triangle .second{
+    position: absolute;
+    left: -6rem;
+    top:8rem;
+    width: 75%;
+    background-color: black;
+    height: 1.3rem;
+    rotate: 60deg;
+    
+}
+.triangle .third{
+    position: absolute;
+    right: 0;
+    top:8rem;
+    width: 75%;
+    background-color: black;
+    height: 1.3rem;
+    rotate: -60deg;
+}
+.triangle .stone{
+    position: absolute;
+    top: -3rem;
+    left: -3rem;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1rem solid #0074B6;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7rem;
+    width: 7rem;
+}
+
+.triangle .paper{
+    position: absolute;
+    top: 14rem;
+    left: 8rem;
+    display: flex;
+    justify-content: center;align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1rem solid  #FFA943;
+    align-content: center;
+   
+    height: 7rem;
+    width: 7rem;
+}
+
+
+.triangle .scissor{
+    position: absolute;
+    top: -3rem;
+    left: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1rem solid #BD00FF;
+    align-content: center;
+   
+    height: 7rem;
+    width: 7rem;
+}
+.triangle .scissor img{
+    /* margin-left: 1.6rem; */
+}
+
+
+.rules ul { 
+  list-style-type:  none;
+}
+
+.rules h1{
+    color: #ffffff;
+    text-align: center;
+    padding-block: 0.5rem;
+    margin-right: 1rem;    
+}
+.btn  button{
+    position: absolute;
+    left:88%;
+    /* top:90%; */
+    bottom:3%;
+    width: 7rem;
+    padding: 8px ;
+    font-size: 1rem;
+      color: #ffffff;
+      background-color: transparent;
+      border:2px solid #ffffff;
+      font-weight: bolder;
+      border-radius: 5px;
+}
+
+.btn img{
+    width: 2rem;
+}
