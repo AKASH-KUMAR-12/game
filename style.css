@@ -169,7 +169,31 @@ rotate: -60.58 deg; */
     height: 7rem;
     width: 7rem;
 }
+.result{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    width: 40%;
+}
+.result .middleResult p{
+    color: #fff;
 
+}
+
+.result .stone{
+    position: absolute;
+    top: -3rem;
+    left: -3rem;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1rem solid #0074B6;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7rem;
+    width: 7rem;
+}
 .triangle .paper{
     position: absolute;
     top: 14rem;
