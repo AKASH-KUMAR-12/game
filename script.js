@@ -1,3 +1,4 @@
+const gameContainer=document.querySelector(".container");
 const userResult=document.querySelector(".userResult img");
 const computerResult=document.querySelector(".computerResult img");
 const optionImages=document.querySelectorAll(".triangle img");
@@ -8,7 +9,9 @@ const playAgainButton=document.querySelector(".playAgain");
 const computerScore=document.querySelector(".computerScore h1");
 const userScore=document.querySelector(".userScore h1");
 const user=document.querySelector(".userResult");
+const userImg=document.querySelector(".userResult img");
 const computer=document.querySelector(".computerResult");
+const computerImg=document.querySelector(".computerResult img");
 const nextButton=document.querySelector("#next");
 const gradientUser=document.querySelector(".gradientUser");
 const gradientPC=document.querySelector(".gradientPC");
@@ -16,8 +19,13 @@ const ruleBtn=document.querySelector(".btn button");
 const rules=document.querySelector(".rules");
 const cross=document.querySelector(".image");
 const againstPc=document.querySelector("#againstPc");
-console.log(userResult,optionImages,result)
+const cupDiv=document.querySelector(".cup");
+const stars=document.querySelector(".star"); 
+const gamePage=document.querySelector(".gamePage");
+const hurrayContainer=document.querySelector(".hurrayContainer");
+const backButton=document.querySelector(".back");
 
+console.log("starts",stars)
 let uScore = parseInt(localStorage.getItem('userScore')) || 0;
 let cScore = parseInt(localStorage.getItem('computerScore')) || 0;
 
@@ -84,40 +92,50 @@ optionImages.forEach((img,index)=>{
         {
             cScore++;
             gradientPC.className="gradientActive";
+            gradientUser.className="gradientUser";
             nextButton.style.display="none";
+            computerImg.className="animationImg";
+              userImg.className=""
         }
         else if(outComeValue=="User")
         {
             uScore++;
             gradientUser.className="gradientActive";
+            gradientPC.className="gradientPC";
             nextButton.style.display="inline";
+            userImg.className="animationImg"
+            computerImg.className="";
         }
         else{
             nextButton.style.display="none";
+            userImg.className=""
+            computerImg.className="";
+            gradientPC.className="gradientPC";
+            gradientUser.className="gradientUser";
         }
 
         if(userValue=="R")
         {   
-        user.style.border="15px solid #0074B6";
+        user.style.border="1rem solid #0074B6";
         }
         else if(userValue=="P")
         {
-            user.style.border="15px solid #FFA943";
+            user.style.border="1rem solid #FFA943";
         }
         else{
-            user.style.border="15px solid #BD00FF";
+            user.style.border="1rem solid #BD00FF";
         }
 
         if(computerValue=="R")
             {   
-            computer.style.border="15px solid #0074B6";
+            computer.style.border="1rem solid #0074B6";
             }
             else if(computerValue=="P")
             {
-                computer.style.border="15px solid #FFA943";
+                computer.style.border="1rem solid #FFA943";
             }
             else{
-                computer.style.border="15px solid #BD00FF";
+                computer.style.border="1rem solid #BD00FF";
             }
     
         
@@ -162,3 +180,16 @@ cross.addEventListener("click",()=>{
     rules.style.display="none";
 }
 )
+
+nextButton.addEventListener("click",()=>{
+    gamePage.style.display="none";
+    // stars.style.display="content";
+    hurrayContainer.style.display="flex";
+    nextButton.style.display="none";
+})
+backButton.addEventListener("click",()=>{
+    hurrayContainer.style.display="none";
+    gamePage.style.display="flex";
+    resultDOM.style.display="none";
+    triangleDOM.style.display="flex";
+})
